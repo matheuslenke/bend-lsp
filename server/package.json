@@ -1,0 +1,16 @@
+{
+  "name": "bend-lsp-server",
+  "description": "Bend LSP server is a language server for the Bend language. It provides code completion, diagnostics, and other features for the Bend language.",
+  "version": "1.0.0",
+  "author": "Matheus Lenke Coutinho",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheuslenke/bend-lsp"
+  },
+  "dependencies": {
+  }
+}

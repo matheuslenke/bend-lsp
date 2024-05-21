@@ -1,0 +1,21 @@
+{
+  "name": "bend-lsp-client",
+  "description": "Bend LSP Client is a Visual Studio Code extension that provides language support for the Bend language.",
+  "author": "Matheus Lenke Coutinho",
+  "license": "MIT",
+  "version": "0.0.1",
+  "publisher": "HoC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheuslenke/bend-lsp"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0"
+  }
+}
