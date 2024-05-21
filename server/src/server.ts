@@ -1,6 +1,8 @@
 import { NotificationMessage, RequestMessage } from "vscode-languageserver";
 import log from "./log.js";
+import { exit } from "./methods/exit.js";
 import { initialize } from "./methods/initialize.js";
+import { shutdown } from "./methods/shutdown.js";
 import { codeAction } from "./methods/textDocument/codeAction.js";
 import { completion } from "./methods/textDocument/completion.js";
 import { diagnostic } from "./methods/textDocument/diagnostic.js";
@@ -17,6 +19,8 @@ type NotificationMethod = (message: NotificationMessage) => void;
 
 const methodLookup: Record<string, RequestMethod | NotificationMethod> = {
     initialize,
+    shutdown,
+    exit,
     "textDocument/completion": completion,
     "textDocument/didChange": didChange,
     "textDocument/diagnostic": diagnostic,
@@ -28,7 +32,7 @@ const respond = (id: RequestMessage['id'], result: object | null) => {
     const messageLength = Buffer.byteLength(message, "utf8")
     const header = `Content-Length: ${messageLength}\r\n\r\n`
 
-    // log.write(header + message)
+    log.write(header + message)
     process.stdout.write(header + message)
 }
 

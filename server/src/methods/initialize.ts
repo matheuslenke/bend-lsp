@@ -8,7 +8,9 @@ export const initialize = (message: RequestMessage): InitializeResult => {
             diagnosticProvider: {
                 interFileDependencies: false,
                 workspaceDiagnostics: false,
-            }
+            },
+            codeActionProvider: true,
+            hoverProvider: true
         },
         serverInfo: {
             name: "bend-lsp",

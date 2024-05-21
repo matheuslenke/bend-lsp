@@ -2,13 +2,15 @@
   "compilerOptions": {
     "target": "es2020",
     "lib": ["es2020"],
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "sourceMap": true,
     "strict": true,
     "outDir": "out",
     "rootDir": "src",
-    "incremental": true
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "include": ["src"],
   "exclude": ["node_modules", ".vscode-test"]
